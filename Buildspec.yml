@@ -1,0 +1,27 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      dotnet: 3.0
+    commands:
+        - echo Installing source NPM dependencies...
+        - npm install -g @angular/cli
+        - npm install @angular/compiler-cli
+        - npm install @angular/compiler --save
+        - npm install typescript
+        - npm install --save-dev @angular-devkit/build-angular
+        - npm install --save-dev @angular/cli@latest
+        - npm i --only=dev
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore AspNetCoreSpa.sln
+  build:
+    commands:
+      - echo Build started on `date`
+      - dotnet publish -c release -o ./build_output AspNetCoreSpa.sln
+artifacts:
+  files:
+    - AspNetCoreSpa/build_output/**/*
+    - scripts/**/*
+    - appspec.yml
