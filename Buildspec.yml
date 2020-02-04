@@ -13,6 +13,7 @@ phases:
         - npm install @angular/core
         - npm install --save-dev @angular/cli@latest
         - npm i --only=dev
+        - npm install node-sass --save
   pre_build:
     commands:
       - echo Restore started on `date`
