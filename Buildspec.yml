@@ -5,17 +5,17 @@ phases:
       dotnet: 3.0
     commands:
         - echo Installing source NPM dependencies...
+        - npm install --save-dev @angular-devkit/build-angular
         - npm install -g @angular/cli
         - npm install @angular/compiler-cli
         - npm install @angular/compiler --save
         - npm install typescript
-        - npm install --save-dev @angular-devkit/build-angular
+        - npm install @angular/core
         - npm install --save-dev @angular/cli@latest
         - npm i --only=dev
   pre_build:
     commands:
       - echo Restore started on `date`
-      - ng build --prod
       - dotnet restore AspNetCoreSpa.sln
   build:
     commands:
