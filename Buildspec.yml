@@ -15,7 +15,7 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - ng build --${BUILD_ENV}
+      - ng build --prod
       - dotnet restore AspNetCoreSpa.sln
   build:
     commands:
