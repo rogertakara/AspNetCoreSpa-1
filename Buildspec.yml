@@ -17,6 +17,10 @@ phases:
         - npm i zone.js
         - npm install bootstrap
         - npm install --save-dev webpack
+        - npm install -g @compodoc/compodoc
+        - npm i codelyzer tslint @angular/compiler @angular/core
+        - npm install --save-dev jest
+        - npm install rxjs
   pre_build:
     commands:
       - echo Restore started on `date`
