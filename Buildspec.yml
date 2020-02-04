@@ -14,6 +14,7 @@ phases:
         - npm install --save-dev @angular/cli@latest
         - npm i --only=dev
         - npm install node-sass --save
+        - npm i zone.js
   pre_build:
     commands:
       - echo Restore started on `date`
