@@ -15,6 +15,7 @@ phases:
         - npm i --only=dev
         - npm install node-sass --save
         - npm i zone.js
+        - npm install bootstrap
   pre_build:
     commands:
       - echo Restore started on `date`
