@@ -9,7 +9,7 @@ phases:
         - npm install -g @angular/cli
         - npm install @angular/compiler-cli
         - npm install @angular/compiler --save
-        - npm install typescript@3.4.0 --save-dev
+        - npm i --save-dev typescript@3.5.3
         - npm install @angular/core
         - npm install --save-dev @angular/cli@latest
         - npm i --only=dev
